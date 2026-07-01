@@ -8,7 +8,7 @@ app = Flask(__name__)
 # ----------------------------
 # Load Trained Model
 # ----------------------------
-with open("model/crop_recommendation_model.pkl", "rb") as file:
+with open("model/crop_model.pkl", "rb") as file:
     model = pickle.load(file)
 
 
@@ -56,6 +56,8 @@ def predict():
 
         prediction = model.predict(data)[0].lower()
 
+        image = f"images/crops/{prediction}.jpg"
+
         confidence = None
 
         if hasattr(model, "predict_proba"):
@@ -83,6 +85,8 @@ def predict():
             }
         )
 
+        crop["image"] = image
+
         return render_template(
             "index.html",
             prediction=prediction.title(),
@@ -99,7 +103,9 @@ def predict():
 
             "index.html",
 
-            error=str(e)
+            error=str(e),
+
+            values=request.form
 
         )
 
