@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-10">
+
+            <div class="card shadow-lg border-0">
+
+                <div class="card-header bg-success text-white text-center">
+
+                    <h2>🌾 Crop Recommendation Result</h2>
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="row">
+
+                        <!-- Crop Image -->
+
+                        <div class="col-md-4 text-center">
+
+                            <img src="{{ url_for('static', filename=crop.image) }}"
+                                 class="img-fluid rounded shadow"
+                                 alt="{{ prediction }}">
+
+                            <h2 class="mt-3 text-success">
+
+                                {{ prediction }}
+
+                            </h2>
+
+                            {% if confidence %}
+
+                            <div class="alert alert-success mt-3">
+
+                                <strong>Prediction Confidence</strong>
+
+                                <br>
+
+                                {{ confidence }}%
+
+                            </div>
+
+                            {% endif %}
+
+                        </div>
+
+                        <!-- Crop Details -->
+
+                        <div class="col-md-8">
+
+                            <table class="table table-bordered">
+
+                                <tr>
+
+                                    <th>Season</th>
+
+                                    <td>{{ crop.season }}</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>Suitable Soil</th>
+
+                                    <td>{{ crop.soil }}</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>Temperature</th>
+
+                                    <td>{{ crop.temperature }}</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>Humidity</th>
+
+                                    <td>{{ crop.humidity }}</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>Rainfall</th>
+
+                                    <td>{{ crop.rainfall }}</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>Water Requirement</th>
+
+                                    <td>{{ crop.water }}</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>Harvest Time</th>
+
+                                    <td>{{ crop.harvest }}</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>Recommended Fertilizer</th>
+
+                                    <td>{{ crop.fertilizer }}</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>Growing Tips</th>
+
+                                    <td>{{ crop.tips }}</td>
+
+                                </tr>
+
+                            </table>
+
+                            <div class="text-center mt-4">
+
+                                <a href="/"
+
+                                   class="btn btn-success btn-lg">
+
+                                    🔄 Predict Another Crop
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

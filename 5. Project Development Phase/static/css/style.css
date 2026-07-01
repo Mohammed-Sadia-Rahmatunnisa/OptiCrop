@@ -1,0 +1,28 @@
+body{
+    background:#eef8ee;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin-top:40px;
+}
+
+.card{
+    border:none;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,0.15);
+    padding:30px;
+}
+
+h1{
+    font-weight:bold;
+}
+
+.btn-success{
+    font-size:18px;
+}
+
+.alert{
+    font-size:22px;
+    font-weight:bold;
+}
