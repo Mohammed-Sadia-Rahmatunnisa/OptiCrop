@@ -9,3 +9,18 @@ function fillSampleData() {
     document.getElementsByName("rainfall")[0].value = 202.93;
 
 }
+
+// Automatically scroll to result after prediction
+window.onload = function () {
+
+    const result = document.getElementById("result");
+
+    if (result) {
+
+        result.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }
+
+};

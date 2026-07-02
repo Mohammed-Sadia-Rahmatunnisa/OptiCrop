@@ -2,55 +2,17 @@
 
 {% block content %}
 
-<!-- ================= HERO SECTION ================= -->
-
 <section class="py-5 bg-light">
 
-<div class="container">
+<div class="container text-center">
 
-<div class="row align-items-center">
-
-<div class="col-lg-6">
-
-<h1 class="display-3 fw-bold text-success">
-
-🌱 OptiCrop
-
+<h1 class="display-4 fw-bold text-success">
+🌾 Crop Recommendation
 </h1>
 
-<h3 class="mb-4">
-
-AI-Powered Crop Recommendation System
-
-</h3>
-
 <p class="lead">
-
-OptiCrop is a Machine Learning based Smart Agricultural Production
-Optimization System that recommends the best crop based on soil nutrients
-and environmental conditions.
-
+Enter the soil nutrient values and environmental conditions below to receive the most suitable crop recommendation using Artificial Intelligence.
 </p>
-
-<a href="#predict" class="btn btn-success btn-lg">
-
-Find Your Crop
-
-</a>
-
-</div>
-
-<div class="col-lg-6 text-center">
-
-<img
-src="{{ url_for('static', filename='images/logo.png') }}"
-class="img-fluid"
-style="max-height:350px;"
-alt="OptiCrop">
-
-</div>
-
-</div>
 
 </div>
 
@@ -58,15 +20,9 @@ alt="OptiCrop">
 
 <!-- ================= PREDICTION FORM ================= -->
 
-<section id="predict" class="py-5">
+<section id="prediction-form" class="py-5">
 
 <div class="container">
-
-<h2 class="text-center text-success mb-5">
-
-🌾 Crop Recommendation
-
-</h2>
 
 <div class="row justify-content-center">
 
@@ -76,7 +32,7 @@ alt="OptiCrop">
 
 <div class="card-header bg-success text-white">
 
-<h3 class="text-center">
+<h3 class="text-center mb-0">
 
 Enter Soil Details
 
@@ -110,9 +66,11 @@ Nitrogen (N)
 
 <input
 type="number"
+min="0"
 class="form-control"
 name="nitrogen"
 placeholder="Example: 90"
+value="{{ values.nitrogen if values else '' }}"
 required>
 
 </div>
@@ -127,9 +85,11 @@ Phosphorus (P)
 
 <input
 type="number"
+min="0"
 class="form-control"
 name="phosphorus"
 placeholder="Example: 42"
+value="{{ values.phosphorus if values else '' }}"
 required>
 
 </div>
@@ -144,9 +104,11 @@ Potassium (K)
 
 <input
 type="number"
+min="0"
 class="form-control"
 name="potassium"
 placeholder="Example: 43"
+value="{{ values.potassium if values else '' }}"
 required>
 
 </div>
@@ -161,10 +123,12 @@ Temperature (°C)
 
 <input
 type="number"
+min="0"
 step="0.01"
 class="form-control"
 name="temperature"
 placeholder="Example: 20.87"
+value="{{ values.temperature if values else '' }}"
 required>
 
 </div>
@@ -178,10 +142,12 @@ Humidity (%)
 
 <input
 type="number"
+min="0"
 step="0.01"
 class="form-control"
 name="humidity"
 placeholder="Example: 82.00"
+value="{{ values.humidity if values else '' }}"
 required>
 
 </div>
@@ -196,10 +162,13 @@ pH Value
 
 <input
 type="number"
+min="0"
+max="14"
 step="0.01"
 class="form-control"
 name="ph"
 placeholder="Example: 6.50"
+value="{{ values.ph if values else '' }}"
 required>
 
 </div>
@@ -214,10 +183,12 @@ Rainfall (mm)
 
 <input
 type="number"
+min="0"
 step="0.01"
 class="form-control"
 name="rainfall"
 placeholder="Example: 202.93"
+value="{{ values.rainfall if values else '' }}"
 required>
 
 </div>
@@ -256,8 +227,9 @@ onclick="fillSampleData()">
 <div class="col-md-4 mb-2 d-grid">
 
 <button
-type="reset"
-class="btn btn-secondary btn-lg">
+type="button"
+class="btn btn-secondary btn-lg"
+onclick="window.location='/predict'">
 
 🗑 Clear Form
 
@@ -282,244 +254,14 @@ class="btn btn-secondary btn-lg">
 </div>
 
 </section>
-<!-- ================= ABOUT SECTION ================= -->
-
-<section id="about" class="py-5 bg-light">
-
-<div class="container">
-
-<div class="row align-items-center">
-
-<div class="col-lg-6">
-
-<img
-src="{{ url_for('static', filename='images/farmers.jpg') }}"
-class="img-fluid rounded shadow"
-alt="Farmer">
-
-</div>
-
-<div class="col-lg-6">
-
-<h2 class="text-success mb-4">
-
-🌱 About OptiCrop
-
-</h2>
-
-<p>
-
-OptiCrop is an AI-powered Smart Agricultural Production Optimization
-System that recommends the most suitable crop based on soil nutrients
-and environmental conditions.
-
-</p>
-
-<p>
-
-The application uses Machine Learning algorithms including
-Random Forest, Decision Tree, Logistic Regression,
-KNN and K-Means to analyze agricultural data.
-
-</p>
-
-<p>
-
-It helps farmers improve productivity,
-reduce crop failure,
-optimize fertilizer usage,
-and support sustainable agriculture.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= FEATURES ================= -->
-
-<section id="features" class="py-5">
-
-<div class="container">
-
-<h2 class="text-center text-success mb-5">
-
-✨ Features
-
-</h2>
-
-<div class="row">
-
-<div class="col-md-4">
-
-<div class="card h-100 shadow border-0">
-
-<div class="card-body text-center">
-
-<h1>🌱</h1>
-
-<h4>
-
-AI Prediction
-
-</h4>
-
-<p>
-
-Predicts the best crop using Random Forest Machine Learning.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card h-100 shadow border-0">
-
-<div class="card-body text-center">
-
-<h1>📊</h1>
-
-<h4>
-
-Soil Analysis
-
-</h4>
-
-<p>
-
-Analyzes Nitrogen,
-Phosphorus,
-Potassium,
-Temperature,
-Humidity,
-pH
-and Rainfall.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card h-100 shadow border-0">
-
-<div class="card-body text-center">
-
-<h1>🚜</h1>
-
-<h4>
-
-Farmer Friendly
-
-</h4>
-
-<p>
-
-Simple user interface with instant crop recommendations
-and farming guidance.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="py-5">
-
-<div class="container">
-
-<h2 class="text-center text-success mb-5">
-
-📞 Contact Us
-
-</h2>
-
-<div class="row justify-content-center">
-
-<div class="col-lg-8">
-
-<div class="card shadow border-0">
-
-<div class="card-body text-center">
-
-<h4>
-
-🌱 OptiCrop Team
-
-</h4>
-
-<hr>
-
-<p>
-
-<strong>Email</strong>
-
-<br>
-
-opticrop@gmail.com
-
-</p>
-
-
-<p>
-
-<strong>Location</strong>
-
-<br>
-
-Andhra Pradesh, India
-
-</p>
-
-<p>
-
-Thank you for using OptiCrop.
-
-We are committed to supporting farmers through AI-powered crop recommendations
-and sustainable agricultural practices.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
 
 <!-- ================= PREDICTION RESULT ================= -->
 
+<hr class="my-5">
+
 {% if prediction %}
 
-<section class="py-5">
+<section id="result" class="py-5">
 
 <div class="container">
 
@@ -527,7 +269,7 @@ and sustainable agricultural practices.
 
 <div class="card-header bg-success text-white text-center">
 
-<h2>🌾 Recommended Crop</h2>
+<h2>🌾 Prediction Result</h2>
 
 </div>
 
@@ -541,14 +283,20 @@ and sustainable agricultural practices.
 
 <img src="{{ url_for('static', filename=crop.image) }}"
      class="img-fluid rounded shadow"
-     style="max-height:300px;"
+     style="max-height:300px; object-fit:contain;"
      alt="{{ prediction }}">
 
-<h2 class="mt-4 text-success">
+<h2 class="mt-4 text-success fw-bold">
 
 {{ prediction }}
 
 </h2>
+
+<p class="text-muted">
+
+The recommended crop based on the provided soil and environmental conditions.
+
+</p>
 
 {% if confidence %}
 
@@ -556,7 +304,7 @@ and sustainable agricultural practices.
 
 <h5>
 
-Prediction Confidence
+Model Confidence
 
 </h5>
 
@@ -647,6 +395,18 @@ Prediction Confidence
 <th>💡 Growing Tips</th>
 
 <td>{{ crop.tips }}</td>
+
+</tr>
+
+<tr>
+
+<th>✅ Recommendation</th>
+
+<td>
+
+Based on the provided soil nutrients and environmental conditions, this crop is the most suitable recommendation generated by the OptiCrop prediction model.
+
+</td>
 
 </tr>
 

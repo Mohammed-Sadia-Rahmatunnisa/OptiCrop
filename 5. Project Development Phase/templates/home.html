@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="py-5 bg-light">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<h1 class="display-3 fw-bold text-success">
+🌱 OptiCrop
+</h1>
+
+<h3 class="mb-4">
+Smart Agricultural Production Optimization Engine
+</h3>
+
+<p class="lead">
+OptiCrop is an AI-powered Smart Agricultural Production Optimization Engine that helps farmers identify the most suitable crop based on soil nutrients and environmental conditions using Machine Learning.
+</p>
+
+<a href="/predict" class="btn btn-success btn-lg">
+🌱 Find Your Crop
+</a>
+
+</div>
+
+<div class="col-lg-6 text-center">
+
+<img
+src="{{ url_for('static', filename='images/logo.png') }}"
+class="img-fluid"
+style="max-height:350px;"
+alt="OptiCrop Logo">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<img
+src="{{ url_for('static', filename='images/background.jpg') }}"
+class="img-fluid rounded shadow"
+alt="Agriculture">
+
+</div>
+
+<div class="col-lg-6">
+
+<h2 class="text-success mb-4">
+🌱 About OptiCrop
+</h2>
+
+<p>
+OptiCrop is a Machine Learning-based crop recommendation system that analyzes soil nutrients and environmental conditions to recommend the most suitable crop for cultivation.
+</p>
+
+<p>
+The system considers Nitrogen (N), Phosphorus (P), Potassium (K), Temperature, Humidity, pH, and Rainfall to provide intelligent crop recommendations.
+</p>
+
+<p>
+Our goal is to improve agricultural productivity, reduce crop failure, and encourage sustainable farming practices through Artificial Intelligence.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="py-5 bg-light">
+
+<div class="container">
+
+<h2 class="text-center text-success mb-5">
+✨ Features
+</h2>
+
+<div class="row">
+
+<div class="col-md-4 mb-4">
+
+<div class="card h-100">
+
+<div class="card-body text-center">
+
+<h1>🌾</h1>
+
+<h4>Smart Crop Prediction</h4>
+
+<p>
+Predicts the most suitable crop using Machine Learning algorithms.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="card h-100">
+
+<div class="card-body text-center">
+
+<h1>🌱</h1>
+
+<h4>Soil & Climate Analysis</h4>
+
+<p>
+Analyzes soil nutrients, temperature, humidity, pH, and rainfall for accurate recommendations.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="card h-100">
+
+<div class="card-body text-center">
+
+<h1>🚜</h1>
+
+<h4>Farmer Friendly</h4>
+
+<p>
+Simple interface with instant crop recommendations and farming guidance.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="py-5">
+
+<div class="container">
+
+<h2 class="text-center text-success mb-5">
+📩 Contact Information
+</h2>
+
+<div class="row justify-content-center">
+
+<div class="col-lg-8">
+
+<div class="card">
+
+<div class="card-body text-center">
+
+<h4 class="text-success">
+🌱 OptiCrop Team
+</h4>
+
+<hr>
+
+<p>
+
+<strong>Email</strong><br>
+
+opticrop@gmail.com
+
+</p>
+
+<p>
+
+<strong>Location</strong><br>
+
+Andhra Pradesh, India
+
+</p>
+
+<p>
+
+For any queries or project-related information, feel free to contact the OptiCrop team.
+
+Together, we aim to empower farmers with AI-driven crop recommendations and promote sustainable agriculture.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

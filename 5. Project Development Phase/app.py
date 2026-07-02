@@ -17,7 +17,7 @@ with open("model/crop_model.pkl", "rb") as file:
 # ----------------------------
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("home.html")
 
 
 # ----------------------------
@@ -27,6 +27,9 @@ def home():
 def about():
     return render_template("about.html")
 
+@app.route("/predict")
+def predict_page():
+    return render_template("predict.html")
 
 # ----------------------------
 # Prediction
@@ -88,7 +91,7 @@ def predict():
         crop["image"] = image
 
         return render_template(
-            "index.html",
+            "predict.html",
             prediction=prediction.title(),
             confidence=confidence,
             crop=crop,
@@ -101,7 +104,7 @@ def predict():
 
         return render_template(
 
-            "index.html",
+            "predict.html",
 
             error=str(e),
 

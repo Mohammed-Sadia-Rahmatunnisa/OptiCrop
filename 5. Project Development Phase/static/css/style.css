@@ -1,28 +1,96 @@
 body{
-    background:#eef8ee;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", sans-serif;
+    background:#f5fff5;
+    color:#333;
 }
 
-.container{
-    margin-top:40px;
+/* Navbar */
+
+.navbar{
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
-.card{
-    border:none;
-    border-radius:15px;
-    box-shadow:0 0 20px rgba(0,0,0,0.15);
-    padding:30px;
+/* Hero */
+
+.display-3{
+    font-weight:700;
 }
 
-h1{
-    font-weight:bold;
-}
-
-.btn-success{
+.lead{
     font-size:18px;
 }
 
-.alert{
-    font-size:22px;
-    font-weight:bold;
+/* Cards */
+
+.card{
+    border:none;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* Buttons */
+
+.btn{
+    border-radius:10px;
+    font-weight:600;
+}
+
+.btn-success{
+    background:#198754;
+}
+
+.btn-primary{
+    background:#0d6efd;
+}
+
+.btn-secondary{
+    background:#6c757d;
+}
+
+/* Form */
+
+.form-control{
+    border-radius:10px;
+}
+
+.form-control:focus{
+    border-color:#198754;
+    box-shadow:0 0 8px rgba(25,135,84,.3);
+}
+
+/* Table */
+
+table th{
+    width:35%;
+    background:#eaf7ea;
+}
+
+/* Crop Image */
+
+#result img{
+    max-height:280px;
+    object-fit:cover;
+}
+
+/* Footer */
+
+footer{
+    margin-top:70px;
+}
+
+footer p{
+    margin-bottom:5px;
+}
+
+/* Animation */
+
+.card,
+.btn,
+img{
+    transition:.3s;
 }
