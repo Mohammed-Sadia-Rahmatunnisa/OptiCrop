@@ -27,12 +27,17 @@ def home():
 def about():
     return render_template("about.html")
 
-@app.route("/predict")
+
+# ----------------------------
+# Prediction Page
+# ----------------------------
+@app.route("/predict", methods=["GET"])
 def predict_page():
     return render_template("predict.html")
 
+
 # ----------------------------
-# Prediction
+# Predict Crop
 # ----------------------------
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -59,18 +64,11 @@ def predict():
 
         prediction = model.predict(data)[0].lower()
 
-        image = f"images/crops/{prediction}.jpg"
-
         confidence = None
 
         if hasattr(model, "predict_proba"):
-
             probability = model.predict_proba(data)
-
-            confidence = round(
-                np.max(probability) * 100,
-                2
-            )
+            confidence = round(np.max(probability) * 100, 2)
 
         crop = crop_info.get(
             prediction,
@@ -86,9 +84,9 @@ def predict():
                 "tips": "Information not available.",
                 "image": "images/crops/default.jpg"
             }
-        )
+        ).copy()
 
-        crop["image"] = image
+        crop["image"] = f"images/crops/{prediction}.jpg"
 
         return render_template(
             "predict.html",
@@ -98,18 +96,12 @@ def predict():
             values=request.form
         )
 
-        
-
     except Exception as e:
 
         return render_template(
-
             "predict.html",
-
-            error=str(e),
-
+            error=f"Error: {e}",
             values=request.form
-
         )
 
 
