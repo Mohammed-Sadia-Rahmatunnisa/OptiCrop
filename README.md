@@ -1,21 +1,123 @@
-# 🌱 OptiCrop: Smart Agricultural Production Optimization Engine
+# 🌱 OptiCrop
 
-## Project Overview
+## Smart Agricultural Production Optimization Engine
 
-OptiCrop is a Machine Learning-based web application that recommends the most suitable crop based on soil nutrients and environmental conditions. The system helps farmers make informed decisions to improve agricultural productivity, optimize resource utilization, and support sustainable farming practices.
+OptiCrop is a Machine Learning based crop recommendation system that helps farmers identify the most suitable crop based on soil nutrients and environmental conditions.
 
-## Repository Structure
+The application analyzes Nitrogen (N), Phosphorus (P), Potassium (K), Temperature, Humidity, pH, and Rainfall to recommend the best crop using a trained Machine Learning model.
+
+---
+
+## Features
+
+- Crop Recommendation using Machine Learning
+- Soil Nutrient Analysis
+- Weather Condition Analysis
+- Crop Information with Growing Tips
+- Prediction Confidence Score
+- User-Friendly Web Interface
+- Responsive Design
+
+---
+
+## Technologies Used
+
+### Programming Language
+- Python
+
+### Machine Learning
+- Scikit-learn
+- Pandas
+- NumPy
+
+### Web Development
+- Flask
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript
+
+---
+
+## Project Structure
 
 ```
-1. Brainstorming & Ideation
-2. Requirement Analysis
-3. Project Design Phase
-4. Project Planning Phase
-5. Project Development Phase
-6. Project Testing
-7. Project Documentation
-8. Project Demonstration
+OptiCrop
+│
+├── dataset
+├── model
+├── notebooks
+├── screenshots
+├── static
+│   ├── css
+│   ├── images
+│   └── js
+├── templates
+│   ├── home.html
+│   ├── about.html
+│   ├── predict.html
+│   └── base.html
+├── app.py
+├── crop_data.py
+├── requirements.txt
+└── README.md
 ```
+
+---
+
+## Installation
+
+Clone the repository
+
+```
+git clone https://github.com/YOUR_USERNAME/OptiCrop.git
+```
+
+Go to project folder
+
+```
+cd OptiCrop
+```
+
+Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+Run
+
+```
+python app.py
+```
+
+Open
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+## Dataset
+
+Crop Recommendation Dataset
+
+Features:
+
+- Nitrogen
+- Phosphorus
+- Potassium
+- Temperature
+- Humidity
+- pH
+- Rainfall
+
+Target:
+
+- Crop Name
+
+---
 
 ## Team Members
 
@@ -25,24 +127,19 @@ OptiCrop is a Machine Learning-based web application that recommends the most su
 - Ullingala Swathi
 - Yamini Karumuri
 
-## Technologies Used
+---
 
-- Python
-- Flask
-- Scikit-learn
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Bootstrap
-- HTML
-- CSS
-- JavaScript
+## Future Enhancements
 
-## Project Objective
-
-To build an AI-powered crop recommendation system that predicts the most suitable crop based on soil nutrients and environmental conditions, helping farmers make informed agricultural decisions.
+- Real-time Weather API
+- Fertilizer Recommendation
+- Disease Detection
+- Mobile Application
+- Multi-language Support
+- GPS-Based Recommendations
 
 ---
 
-**Developed as part of the SmartBridge Internship Project.**
+## License
+
+This project was developed for academic and educational purposes.
