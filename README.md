@@ -285,7 +285,13 @@ http://127.0.0.1:5000
 
 ## 🏠 Home Page
 
-![Home Page](5.%20Project%20Development%20Phase/screenshots/home.png)
+### Top Section
+
+![Home Top](5.%20Project%20Development%20Phase/screenshots/home_top.png)
+
+### Bottom Section
+
+![Home Bottom](5.%20Project%20Development%20Phase/screenshots/home_bottom.png)
 
 ---
 
