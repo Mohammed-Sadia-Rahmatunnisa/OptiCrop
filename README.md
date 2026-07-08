@@ -279,6 +279,19 @@ Open your browser
 http://127.0.0.1:5000
 ```
 
+# 🔗 Repository
+
+GitHub Repository:
+
+https://github.com/Mohammed-Sadia-Rahmatunnisa/OptiCrop
+
+---
+# 🌐 Live Demo
+
+Live Application:
+
+https://opticrop-1-sh40.onrender.com
+
 ---
 
 # 📷 Application Screenshots
