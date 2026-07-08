@@ -5,7 +5,6 @@ OptiCrop is a Machine Learning-based web application that recommends the most su
 The project aims to assist farmers in selecting suitable crops, improving agricultural productivity, reducing crop failure, and promoting sustainable farming practices.
 
 ---
-
 # 📖 Table of Contents
 
 - Project Overview
@@ -22,13 +21,13 @@ The project aims to assist farmers in selecting suitable crops, improving agricu
 - Project Structure
 - Installation
 - Running the Application
+- Repository
+- Live Demo
 - Application Screenshots
 - Future Enhancements
 - Team Members
 - Acknowledgements
 - License
-
----
 
 # 📌 Project Overview
 
@@ -272,12 +271,26 @@ Run the Flask application
 ```bash
 python app.py
 ```
-
+---
 Open your browser
 
 ```
 http://127.0.0.1:5000
 ```
+---
+
+# 🔗 Repository
+
+GitHub Repository:
+
+https://github.com/Mohammed-Sadia-Rahmatunnisa/OptiCrop
+
+---
+# 🌐 Live Demo
+
+Live Application:
+
+https://opticrop-1-sh40.onrender.com
 
 ---
 
@@ -310,6 +323,14 @@ http://127.0.0.1:5000
 ## 🌾 Prediction Result
 
 ![Prediction Result](5.%20Project%20Development%20Phase/screenshots/rice_prediction.png)
+
+---
+
+---
+
+## 🗂 Entity Relationship Diagram
+
+![ER Diagram](5.%20Project%20Development%20Phase/screenshots/er_diagram.png)
 
 ---
 
