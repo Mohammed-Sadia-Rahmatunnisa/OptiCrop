@@ -326,6 +326,14 @@ https://opticrop-1-sh40.onrender.com
 
 ---
 
+---
+
+## 🗂 Entity Relationship Diagram
+
+![ER Diagram](5.%20Project%20Development%20Phase/screenshots/er_diagram.png)
+
+---
+
 # 🚀 Future Enhancements
 
 - Weather API Integration
